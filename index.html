@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeyad Mohamed — Code Style CV</title>
+    <meta name="description" content="Zeyad Mohamed Fathy Ali — IT Student & Full-Stack Developer. Creative CV designed as C# source code with syntax highlighting.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cv-page" id="cv-page">
+        <!-- ===== LEFT COLUMN ===== -->
+        <div class="col col-left" id="col-left">
+
+            <!-- Profile Image -->
+            <div class="code-block" id="profile-image-block">
+                <span class="tag">&lt;img&gt;</span>
+                <div class="profile-photo-wrapper" id="profile-photo-wrapper">
+                    <img src="profile.jpeg" alt="Zeyad Mohamed" class="profile-photo" id="profile-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'photo-placeholder\'>👨‍💻<br><span>Zeyad M.</span></div>';">
+                </div>
+                <span class="tag">&lt;\img&gt;</span>
+            </div>
+
+            <!-- PLATFORMS -->
+            <div class="code-block" id="platforms-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">enum</span> <span class="type-name">PLATFORMS</span><span class="punc">()</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="enum-body">
+                    <div class="line indent"><span class="enum-val">Windows</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Linux</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Kali_Linux</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Windows_Server</span></div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- LANGUAGES (Programming) -->
+            <div class="code-block" id="prog-languages-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">enum</span> <span class="type-name">LANGUAGES</span><span class="punc">()</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="enum-body">
+                    <div class="line indent"><span class="enum-val">C</span><span class="punc">,</span> <span class="enum-val">Cpp</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Python</span><span class="punc">,</span> <span class="enum-val">Java</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">JavaScript</span><span class="punc">,</span> <span class="enum-val">PHP</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">HTML5</span><span class="punc">,</span> <span class="enum-val">CSS3</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">SQL</span><span class="punc">,</span> <span class="enum-val">Bash</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">JSON</span></div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- TOOLS / SOFTWARE -->
+            <div class="code-block" id="tools-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">enum</span> <span class="type-name">TOOLS</span><span class="punc">()</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="enum-body">
+                    <div class="line indent"><span class="enum-val">Git & GitHub</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">VS Code</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Wireshark</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Nmap</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Burp Suite</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Metasploit</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">MySQL</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Arduino</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Fortinet</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">Postman</span></div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- MEDIA / Social Links -->
+            <div class="code-block" id="media-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">enum</span> <span class="type-name">MEDIA</span><span class="punc">()</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="enum-body">
+                    <div class="line indent">
+                        <span class="enum-val">LinkedIn</span><span class="punc">,</span>
+                    </div>
+                    <div class="line indent comment">
+                        <span class="cm">//in/zeyad-m0hamed</span>
+                    </div>
+                    <div class="line indent">
+                        <span class="enum-val">Email</span><span class="punc">,</span>
+                    </div>
+                    <div class="line indent comment">
+                        <span class="cm">//ziadmohamd455@gmail.com</span>
+                    </div>
+                    <div class="line indent">
+                        <span class="enum-val">GitHub</span>
+                    </div>
+                    <div class="line indent comment">
+                        <span class="cm">//github.com/zeyad-m0hamed</span>
+                    </div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- SPOKEN LANGUAGES -->
+            <div class="code-block" id="spoken-lang-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">enum</span> <span class="type-name">SPOKEN_LANG</span><span class="punc">()</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="enum-body">
+                    <div class="line indent"><span class="cm">// Native</span></div>
+                    <div class="line indent"><span class="enum-val">ARABIC</span> <span class="op">=</span> <span class="enum-val">Native</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="cm">// Intermediate</span></div>
+                    <div class="line indent"><span class="enum-val">ENGLISH</span> <span class="op">=</span> <span class="enum-val">B1_B2</span></div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- PROFILE TRAITS -->
+            <div class="code-block" id="profile-traits-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">enum</span> <span class="type-name">SOFT_SKILLS</span><span class="punc">()</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="enum-body">
+                    <div class="line indent"><span class="enum-val">LEARN_AND_RESEARCH</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">TIME_MANAGEMENT</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">EFFECTIVE_COMMUNICATION</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">TEAM_COLLABORATION</span><span class="punc">,</span></div>
+                    <div class="line indent"><span class="enum-val">PROBLEM_SOLVING</span></div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+        </div>
+
+        <!-- ===== RIGHT COLUMN ===== -->
+        <div class="col col-right" id="col-right">
+
+            <!-- Summary Comment -->
+            <div class="code-block" id="summary-block">
+                <div class="line"><span class="xml-cm">/// &lt;summary&gt;</span></div>
+                <div class="line"><span class="xml-cm">/// IT student with experience in web development,</span></div>
+                <div class="line"><span class="xml-cm">/// networking, network security and cybersecurity</span></div>
+                <div class="line"><span class="xml-cm">/// &lt;\summary&gt;</span></div>
+            </div>
+
+            <!-- INFORMATION CLASS -->
+            <div class="code-block" id="info-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">class</span> <span class="class-name">INFORMATION</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="class-body">
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="type">string</span> <span class="field">NAME</span> <span class="op">=</span> <span class="str">"Zeyad Mohamed Fathy Ali"</span><span class="punc">;</span>
+                    </div>
+                    <div class="line indent spacer"></div>
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="type">string</span> <span class="field">TITLE</span> <span class="op">=</span> <span class="str">"IT Student | Full-Stack Developer"</span><span class="punc">;</span>
+                    </div>
+                    <div class="line indent spacer"></div>
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="type">string</span> <span class="field">EMAIL</span> <span class="op">=</span> <span class="str">"ziadmohamd455@gmail.com"</span><span class="punc">;</span>
+                    </div>
+                    <div class="line indent spacer"></div>
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="type">int</span> <span class="field">PHONE</span> <span class="op">=</span> <span class="num">+20 1100660849</span><span class="punc">;</span>
+                    </div>
+                    <div class="line indent spacer"></div>
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="type">string</span> <span class="field">LINKEDIN</span> <span class="op">=</span> <span class="str">"linkedin.com/in/zeyad-m0hamed"</span><span class="punc">;</span>
+                    </div>
+                    <div class="line indent spacer"></div>
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="type">string[]</span> <span class="field">LOCATION</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"Cairo", "Egypt"</span><span class="punc">}</span>
+                    </div>
+
+                    <div class="line indent spacer"></div>
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="type">bool</span> <span class="field">OPEN_TO_WORK</span> <span class="op">=</span> <span class="kw">true</span><span class="punc">;</span>
+                    </div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="code-block" id="education-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">partial</span> <span class="kw">class</span> <span class="class-name">EDUCATION</span> <span class="punc">:</span> <span class="class-name">AcademicBackground</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="class-body">
+
+                    <!-- University -->
+                    <div class="line indent">
+                        <span class="kw">private</span> <span class="kw">void</span> <span class="method">UniversityDegree</span><span class="punc">()</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Level</span> <span class="op">=</span> <span class="enum-val">Bachelor</span><span class="punc">;</span> <span class="cm">// 3rd Year</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_University</span> <span class="op">=</span> <span class="str">"New Cairo Technological University (NCTU)"</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Faculty</span> <span class="op">=</span> <span class="type">Technology</span>.<span class="type">IT_Network</span><span class="punc">();</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Grade</span> <span class="op">=</span> <span class="num">91</span><span class="punc">;</span> <span class="cm">// Excellent</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Certifications -->
+                    <div class="line indent">
+                        <span class="kw">private</span> <span class="kw">void</span> <span class="method">Certifications</span><span class="punc">(</span><span class="type">string[]</span> <span class="param">_Certs</span><span class="punc">)</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Certs</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"Certified Assoc. Penetration Tester"</span><span class="punc">,</span>
+                        </div>
+                        <div class="line indent3">
+                            <span class="str">"FCP - FortiGate 7.4 Administrator"</span><span class="punc">,</span>
+                        </div>
+                        <div class="line indent3">
+                            <span class="str">"Fortinet Cybersecurity"</span><span class="punc">,</span>
+                        </div>
+                        <div class="line indent3">
+                            <span class="str">"Cybersecurity Fundamentals"</span><span class="punc">,</span>
+                        </div>
+                        <div class="line indent3">
+                            <span class="str">"Info Security Fundamentals"</span><span class="punc">,</span>
+                        </div>
+                        <div class="line indent3">
+                            <span class="str">"Ethical Hacking"</span><span class="punc">,</span>
+                        </div>
+                        <div class="line indent3">
+                            <span class="str">"CCNA Security"</span><span class="punc">};</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="code-block" id="experience-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">static</span> <span class="kw">class</span> <span class="class-name">EXPERIENCE</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="class-body">
+
+                    <!-- Intern 1 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">FortinetCybersecurityIntern</span><span class="punc">()</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Company</span> <span class="op">=</span> <span class="str">"NTI"</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Type</span> <span class="op">=</span> <span class="kw">new</span> <span class="type">Internship</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">/*Fortinet cybersecurity training,</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">network security & FortiGate config*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Intern 2 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">CybersecurityIntern</span><span class="punc">()</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Company</span> <span class="op">=</span> <span class="str">"NTI"</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Type</span> <span class="op">=</span> <span class="kw">new</span> <span class="type">Internship</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">/*Vulnerability assessment, security</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">fundamentals & threat analysis*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Intern 3 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">PenTestingIntern</span><span class="punc">()</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Company</span> <span class="op">=</span> <span class="str">"WE Innovate"</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Type</span> <span class="op">=</span> <span class="kw">new</span> <span class="type">Internship</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">/*Penetration testing, Kali Linux,</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">Nmap, Wireshark & Burp Suite*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Intern 4 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">PenTestingIntern_2</span><span class="punc">()</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Company</span> <span class="op">=</span> <span class="str">"Hackviser"</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Type</span> <span class="op">=</span> <span class="kw">new</span> <span class="type">Internship</span><span class="punc">;</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">/*Penetration testing certification,</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">Metasploit & security assessment*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="code-block" id="projects-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">static</span> <span class="kw">class</span> <span class="class-name">PROJECTS</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="class-body">
+
+                    <!-- Project 1 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">ZStore_ECommerce</span><span class="punc">()</span> <span class="cm">// Full Stack</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Stack</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"HTML5"</span><span class="punc">,</span> <span class="str">"CSS3"</span><span class="punc">,</span> <span class="str">"JS"</span><span class="punc">,</span> <span class="str">"PHP"</span><span class="punc">,</span> <span class="str">"MySQL"</span><span class="punc">};</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">/*Clothing store with admin panel,</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">shopping cart & product management*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Project 2 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">ShoeStore_ECommerce</span><span class="punc">()</span> <span class="cm">// Full Stack</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="kw">var</span> <span class="field">_Stack</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"HTML"</span><span class="punc">,</span> <span class="str">"CSS"</span><span class="punc">,</span> <span class="str">"JS"</span><span class="punc">,</span> <span class="str">"PHP"</span><span class="punc">,</span> <span class="str">"MySQL"</span><span class="punc">};</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">/*E-commerce with admin panel</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">and dynamic cart system*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Project 3 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">StudentManagement</span><span class="punc">()</span> <span class="cm">// C++</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="block-cm">/*OOP program to manage student records,</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">calculate grades & sort by performance*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Project 4 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">SupermarketDB</span><span class="punc">()</span> <span class="cm">// MySQL</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="block-cm">/*Database with products, sales,</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">inventory, triggers & procedures*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Project 5 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">FullBodyRobot</span><span class="punc">()</span> <span class="cm">// Hardware</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="block-cm">/*Designed & built a fully functional</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">robot from scratch in 3 weeks*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Project 6 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">AirbrushRoboticArm</span><span class="punc">()</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="block-cm">/*Robotic arm with airbrush system</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">for automatic drawing & painting*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                    <div class="line spacer"></div>
+
+                    <!-- Project 7 -->
+                    <div class="line indent">
+                        <span class="kw">public</span> <span class="kw">void</span> <span class="method">ALU_Design</span><span class="punc">()</span> <span class="cm">// Logic Gates</span>
+                    </div>
+                    <div class="line indent"><span class="punc">{</span></div>
+                    <div class="method-body">
+                        <div class="line indent2">
+                            <span class="block-cm">/*ALU from scratch using AND, OR,</span>
+                        </div>
+                        <div class="line indent2">
+                            <span class="block-cm">XOR, NOT for add & subtract ops*/</span>
+                        </div>
+                    </div>
+                    <div class="line indent"><span class="punc">}</span></div>
+
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+            <!-- TECHNICAL SKILLS -->
+            <div class="code-block" id="tech-skills-block">
+                <div class="line">
+                    <span class="kw">public</span> <span class="kw">static</span> <span class="kw">class</span> <span class="class-name">TECHNICAL_SKILLS</span>
+                </div>
+                <div class="line"><span class="punc">{</span></div>
+                <div class="class-body">
+                    <div class="line indent">
+                        <span class="kw">var</span> <span class="field">_Network</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"CCNA"</span><span class="punc">,</span> <span class="str">"CCNP"</span><span class="punc">};</span>
+                    </div>
+                    <div class="line indent">
+                        <span class="kw">var</span> <span class="field">_Database</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"MySQL"</span><span class="punc">,</span> <span class="str">"SQL Server"</span><span class="punc">};</span>
+                    </div>
+                    <div class="line indent">
+                        <span class="kw">var</span> <span class="field">_Embedded</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"Arduino"</span><span class="punc">,</span> <span class="str">"ESP"</span><span class="punc">,</span> <span class="str">"Microprocessors"</span><span class="punc">};</span>
+                    </div>
+                    <div class="line indent">
+                        <span class="kw">var</span> <span class="field">_SysAdmin</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"MCSA"</span><span class="punc">,</span> <span class="str">"Active Directory"</span><span class="punc">,</span>
+                    </div>
+                    <div class="line indent2">
+                        <span class="str">"Linux Admin"</span><span class="punc">,</span> <span class="str">"Windows Server"</span><span class="punc">};</span>
+                    </div>
+                    <div class="line indent">
+                        <span class="kw">var</span> <span class="field">_CyberSec</span> <span class="op">=</span> <span class="punc">{</span><span class="str">"Pen Testing"</span><span class="punc">,</span>
+                    </div>
+                    <div class="line indent2">
+                        <span class="str">"Vuln Assessment"</span><span class="punc">,</span> <span class="str">"Fortinet"</span><span class="punc">};</span>
+                    </div>
+                </div>
+                <div class="line"><span class="punc">}</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Print Button -->
+    <div class="print-controls" id="print-controls">
+        <button class="print-btn" id="print-btn" onclick="window.print()">
+            <span>🖨️</span> Print / Save as PDF
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

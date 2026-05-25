@@ -1,0 +1,433 @@
+/* ============================================================
+   CODE-STYLE CV — Dark Terminal Theme
+   Mimics C# syntax in a code editor
+   ============================================================ */
+
+:root {
+    /* Background */
+    --bg-page: #0d1117;
+    --bg-block: transparent;
+
+    /* Syntax Colors — carefully curated */
+    --kw: #569cd6;           /* keywords: public, class, enum, var, new, true */
+    --type: #4ec9b0;         /* types: string, int, bool, FullTime */
+    --type-name: #dcdcaa;    /* enum names: PLATFORMS, LANGUAGES */
+    --class-name: #4ec9b0;   /* class names: INFORMATION, EDUCATION */
+    --method: #dcdcaa;       /* method names */
+    --field: #9cdcfe;        /* field/variable names */
+    --str: #ce9178;          /* strings */
+    --num: #b5cea8;          /* numbers */
+    --cm: #6a9955;           /* comments */
+    --block-cm: #6a9955;     /* block comments */
+    --xml-cm: #608b4e;       /* xml doc comments */
+    --enum-val: #b8d7a3;     /* enum values */
+    --param: #9cdcfe;        /* parameter names */
+    --op: #d4d4d4;           /* operators = */
+    --punc: #d4d4d4;         /* punctuation { } ( ) ; , */
+    --tag: #808080;          /* <img> tags */
+
+    /* Text */
+    --text: #d4d4d4;
+    --text-dim: #6a737d;
+
+    /* Font */
+    --font: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    --font-size: 11.5px;
+    --line-height: 1.55;
+
+    /* Layout */
+    --page-max-w: 1100px;
+    --page-padding: 32px 36px;
+    --col-gap: 28px;
+    --left-col-w: 32%;
+}
+
+/* ============= RESET ============= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #080b10;
+    color: var(--text);
+    font-family: var(--font);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px 16px;
+}
+
+/* ============= CV PAGE ============= */
+.cv-page {
+    width: 100%;
+    max-width: var(--page-max-w);
+    background: var(--bg-page);
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: var(--page-padding);
+    display: flex;
+    gap: var(--col-gap);
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.03),
+        0 8px 40px rgba(0,0,0,0.5),
+        0 0 80px rgba(86, 156, 214, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle scanline effect */
+.cv-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.008) 2px,
+        rgba(255,255,255,0.008) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ============= COLUMNS ============= */
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.col-left {
+    width: var(--left-col-w);
+    flex-shrink: 0;
+    border-right: 1px solid #21262d;
+    padding-right: var(--col-gap);
+}
+
+.col-right {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ============= CODE BLOCKS ============= */
+.code-block {
+    margin-bottom: 4px;
+}
+
+.line {
+    min-height: calc(var(--font-size) * var(--line-height));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.line.spacer {
+    height: calc(var(--font-size) * var(--line-height) * 0.5);
+    min-height: calc(var(--font-size) * var(--line-height) * 0.5);
+}
+
+.indent {
+    padding-left: 2em;
+}
+
+.indent2 {
+    padding-left: 4em;
+}
+
+.indent3 {
+    padding-left: 6em;
+}
+
+/* ============= SYNTAX HIGHLIGHTING ============= */
+.kw {
+    color: var(--kw);
+    font-weight: 500;
+}
+
+.type {
+    color: var(--type);
+}
+
+.type-name {
+    color: var(--type-name);
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+.class-name {
+    color: var(--class-name);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.method {
+    color: var(--method);
+}
+
+.field {
+    color: var(--field);
+}
+
+.str {
+    color: var(--str);
+}
+
+.num {
+    color: var(--num);
+}
+
+.cm {
+    color: var(--cm);
+    font-style: italic;
+}
+
+.block-cm {
+    color: var(--block-cm);
+    font-style: italic;
+}
+
+.xml-cm {
+    color: var(--xml-cm);
+}
+
+.enum-val {
+    color: var(--enum-val);
+}
+
+.param {
+    color: var(--param);
+}
+
+.op {
+    color: var(--op);
+}
+
+.punc {
+    color: var(--punc);
+}
+
+.tag {
+    color: var(--tag);
+    font-size: 0.95em;
+}
+
+/* ============= PROFILE PHOTO ============= */
+.profile-photo-wrapper {
+    width: 140px;
+    height: 165px;
+    margin: 6px 0;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background: #161b22;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    font-size: 28px;
+    gap: 6px;
+    background: linear-gradient(135deg, #161b22, #1c2333);
+}
+
+.photo-placeholder span {
+    font-size: 10px;
+    color: var(--text-dim);
+}
+
+/* ============= ENUM & CLASS BODIES ============= */
+.enum-body,
+.class-body,
+.method-body {
+    /* Slight left border for visual grouping */
+}
+
+/* ============= HOVER EFFECTS ============= */
+.code-block .line:not(.spacer):hover {
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: 2px;
+}
+
+.str:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(206, 145, 120, 0.4);
+    cursor: default;
+}
+
+/* ============= GLOWING ACCENTS ============= */
+.class-name {
+    text-shadow: 0 0 12px rgba(78, 201, 176, 0.15);
+}
+
+.type-name {
+    text-shadow: 0 0 12px rgba(220, 220, 170, 0.1);
+}
+
+/* ============= PRINT BUTTON ============= */
+.print-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.print-btn {
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+}
+
+.print-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(35, 134, 54, 0.4);
+    background: linear-gradient(135deg, #2ea043, #3fb950);
+}
+
+.print-btn:active {
+    transform: translateY(0);
+}
+
+/* ============= ANIMATIONS ============= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.code-block {
+    animation: fadeInUp 0.4s ease both;
+}
+
+.col-left .code-block:nth-child(1) { animation-delay: 0.05s; }
+.col-left .code-block:nth-child(2) { animation-delay: 0.1s; }
+.col-left .code-block:nth-child(3) { animation-delay: 0.15s; }
+.col-left .code-block:nth-child(4) { animation-delay: 0.2s; }
+.col-left .code-block:nth-child(5) { animation-delay: 0.25s; }
+.col-left .code-block:nth-child(6) { animation-delay: 0.3s; }
+.col-left .code-block:nth-child(7) { animation-delay: 0.35s; }
+
+.col-right .code-block:nth-child(1) { animation-delay: 0.08s; }
+.col-right .code-block:nth-child(2) { animation-delay: 0.14s; }
+.col-right .code-block:nth-child(3) { animation-delay: 0.2s; }
+.col-right .code-block:nth-child(4) { animation-delay: 0.26s; }
+
+/* ============= PRINT STYLES ============= */
+@media print {
+    body {
+        background: #0d1117 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    .cv-page {
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        padding: 20px 24px !important;
+        page-break-inside: avoid;
+    }
+
+    .cv-page::before {
+        display: none !important;
+    }
+
+    .print-controls {
+        display: none !important;
+    }
+
+    .code-block {
+        animation: none !important;
+    }
+
+    @page {
+        size: A4 landscape;
+        margin: 8mm;
+    }
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 800px) {
+    :root {
+        --font-size: 10.5px;
+        --page-padding: 20px 18px;
+        --col-gap: 16px;
+        --left-col-w: 35%;
+    }
+
+    .profile-photo-wrapper {
+        width: 110px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cv-page {
+        flex-direction: column;
+        padding: 20px 14px;
+    }
+
+    .col-left {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #21262d;
+        padding-right: 0;
+        padding-bottom: 16px;
+    }
+
+    .profile-photo-wrapper {
+        width: 120px;
+        height: 140px;
+    }
+
+    :root {
+        --font-size: 11px;
+    }
+}
